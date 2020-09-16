@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The House Officer's List</title>
+
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div>
+        <h1 class="center-align">The House Officers's List</h1>
+      </div>
+      <form>
+        Px Name:
+        <div class="input-field inline">
+          <label for="patient-name">Patient's Name</label>
+          <input type="text" name="patient-name" id="patient-name" />
+        </div>
+        <div>
+          Hospital Number:
+          <div class="input-field inline">
+            <label for="hospital-no">#</label>
+            <input type="number" name="hospital-no" id="hospital-no" />
+          </div>
+        </div>
+        <div>
+          Sys(mmHg):
+          <div class="input-field inline">
+            <label for="sys"
+              ><i class="material-icons red-text">favorite</i></label
+            >
+            <input type="number" min="10" max="300" name="sys" id="sys" />
+          </div>
+          Dia(mmHg):
+          <div class="input-field inline">
+            <label for="dia"
+              ><i class="material-icons red-text">favorite</i></label
+            >
+            <input type="number" min="10" max="300" name="dia" id="dia" />
+          </div>
+          RR(cyc/min):
+          <div class="input-field inline">
+            <label for="rr">RR</label>
+            <input type="number" min="1" max="90" name="rr" id="rr" />
+          </div>
+          Blood Sugar(mmol/l):
+          <div class="input-field inline">
+            <label for="blood-sugar"
+              ><i class="material-icons black-text">opacity</i></label
+            >
+            <input
+              type="number"
+              step="any"
+              min="1"
+              max="300"
+              name="blood-sugar"
+              id="blood-sugar"
+            />
+          </div>
+        </div>
+
+        Working Dx:
+        <div class="input-field inline">
+          <textarea
+            name="diagnosis"
+            id="diagnosis"
+            cols="70%"
+            rows="10"
+            class="materialize-textarea"
+          ></textarea>
+        </div>
+
+        <div class="center-align">
+          <input
+            type="submit"
+            value="Add Patient +"
+            class="btn waves-effect waves-light"
+          />
+        </div>
+      </form>
+      <br />
+      <br />
+      <br />
+      <table class="striped bordered highlight">
+        <thead>
+          <tr>
+            <th>Patient's Name</th>
+            <th>Hospital No.</th>
+            <th>BP</th>
+            <th>RR</th>
+            <th>BS(mmol/l)</th>
+            <th>Working Dx</th>
+          </tr>
+        </thead>
+        <tbody id="list" class="list"></tbody>
+      </table>
+      <div id="push"></div>
+    </div>
+
+    <footer class="page-footer grey darken-2">
+      <div class="footer-copyright grey darken-2">
+        <div class="container">Copyright &copy; 2020 Chijindu Nwakama</div>
+      </div>
+    </footer>
+
+    <style>
+      #push {
+        height: 120px;
+      }
+      .highlight {
+        padding-bottom: 100px;
+        padding-top: 50px;
+      }
+    </style>
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
